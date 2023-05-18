@@ -1,5 +1,5 @@
 # angka romawi
-from typing import Union, List
+from typing import Union, List, Literal
 
 class Romawi:
     def __init__(self):
@@ -35,7 +35,7 @@ class Prima:
     def __init__(self, pp: int):
         self.prima = pp
 
-    def is_prima(self) -> bool:
+    def is_prima(self) -> Literal[bool]:
         if self.prima < 2:
             return False
         elif self.prima % 2 == 1:
@@ -63,7 +63,7 @@ class Fibo:
             return fibs
 
 if __name__=="__main__":
-    bb = KPK(60, 48).kpk()
+    bb = Prima(4).is_prima()
     print(bb)
 
 
